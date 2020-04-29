@@ -18,30 +18,30 @@
 
 # Testing server status:
 
-Go to http://localhost:5000/jsontest
+Go to ```http://localhost:5000/jsontest```
 
 # Getting all strains:
 
-Go to http://localhost:5000/strains/all 
+Go to ```http://localhost:5000/strains/all```
 
 # Getting a strain by ID:
 
-Go to http://localhost:5000/strains/id/[id]
+Go to ```http://localhost:5000/strains/id/[id]```
 
-Example: 'http://localhost:5000/strains/id/420'
+Example: ```http://localhost:5000/strains/id/420```
 
 # Getting strains by symptom:
 
-Go to http://localhost:5000/strains/symptom/[symptom]
+Go to ```http://localhost:5000/strains/symptom/[symptom]```
 
-Example: 'http://localhost:5000/strains/symptom/insomnia', 'http://localhost:5000/strains/symptom/Eye Pressure'
+Example: ```http://localhost:5000/strains/symptom/insomnia``` or ```http://localhost:5000/strains/symptom/Eye Pressure```
 
 Note: Not caps sensitive, and still accepts symptoms with spaces in the name.
 
 # Getting strains by query:
 
-Go to http://localhost:5000/strains/query/[query]
+Go to ```http://localhost:5000/strains/query/[query]```
 
-Example: 'http://localhost:5000/strains/query/My head hurts', "http://localhost:5000/strains/query/I can't go to sleep."
+Example: ```http://localhost:5000/strains/query/My head hurts``` or ```http://localhost:5000/strains/query/I can't go to sleep.```
 
 Note: Still accepts queries with spaces and special characters in them. Please let me know if you find any input that breaks things.
