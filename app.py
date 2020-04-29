@@ -5,6 +5,8 @@ from flask import request
 from components import test_component
 from components import all_strains
 from components import strain_from_id
+from components import symptom_from_query
+from components import strain_from_symptom
 
 app = Flask(__name__)
 
@@ -45,4 +47,19 @@ def get_all_strains():
 def get_strain_from_id(strainid):
     strainid = int(strainid)
     data = strain_from_id(strainid)
+    return jsonify(data)
+
+
+# http://localhost:5000/strains/symptom/insomnia
+@app.route('/strains/symptom/<symptom>')
+def get_strain_from_symptom(symptom):
+    data = strain_from_symptom(symptom)
+    return jsonify(data)
+
+
+# http://localhost:5000/strains/query/My head hurts
+@app.route('/strains/query/<query>')
+def get_strain_from_query(query):
+    symptom = symptom_from_query(query)
+    data = strain_from_symptom(symptom)
     return jsonify(data)
