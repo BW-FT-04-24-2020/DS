@@ -16,6 +16,10 @@
 
 7) When done, exit pipenv shell with ```exit```
 
+# Heroku server:
+
+This app is currently deployed on Heroku. The address is: https://medcabinet-strain-api.herokuapp.com/
+
 # Testing server status:
 
 Go to ```http://localhost:5000/jsontest```
@@ -45,3 +49,9 @@ Go to ```http://localhost:5000/strains/query/[query]```
 Example: ```http://localhost:5000/strains/query/My head hurts``` or ```http://localhost:5000/strains/query/I can't go to sleep.```
 
 Note: Still accepts queries with spaces and special characters in them. Please let me know if you find any input that breaks things.
+
+# Testing NLP symptom model:
+
+Go to ```http://localhost:5000/test/[query]```
+
+Example: ```http://localhost:5000/test/My head hurts``` or ```http://localhost:5000/test/I can't go to sleep.```
