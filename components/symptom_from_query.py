@@ -5,11 +5,9 @@ from os import getcwd
 def symptom_from_query(query):
     path = getcwd()
     model_filepath = join(path, "data", "model.p")
-    count_vect_filepath = join(path, "data", "count_vect.p")
     clf = pickle.load(open(model_filepath, "rb"))
-    count_vect = pickle.load(open(count_vect_filepath, "rb"))
 
-    symptom = clf.predict(count_vect.transform([query])) 
+    symptom = clf.predict([query])
     symptom = str(symptom[0])
     return(symptom)
 

@@ -15,4 +15,4 @@ def strain_from_symptom(symptom):
     df = df.reset_index()
     df = df.rename(columns={'index':'id'})
 
-    return df.to_json(orient='records', indent=1)
+    return df.to_json(orient='records')

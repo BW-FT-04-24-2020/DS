@@ -2,6 +2,8 @@ from flask import Flask
 from flask import jsonify
 from flask import request
 
+from flask_cors import CORS
+
 from components import test_component
 from components import all_strains
 from components import strain_from_id
@@ -9,6 +11,7 @@ from components import symptom_from_query
 from components import strain_from_symptom
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/")
 def hello():
@@ -63,3 +66,10 @@ def get_strain_from_query(query):
     symptom = symptom_from_query(query)
     data = strain_from_symptom(symptom)
     return jsonify(data)
+
+
+# http://localhost:5000/test/My head hurts
+@app.route('/test/<query>')
+def get_symptom_from_query(query):
+    symptom = symptom_from_query(query)
+    return symptom

@@ -12,4 +12,4 @@ def strain_from_id(strain_id):
 
     df = df[df['id'] == strain_id]
     
-    return df.to_json(orient='records', indent=1)
+    return df.to_json(orient='records')

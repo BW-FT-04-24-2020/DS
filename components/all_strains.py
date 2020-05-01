@@ -10,4 +10,4 @@ def all_strains():
     df = df.reset_index()
     df = df.rename(columns={'index':'id'})
 
-    return df.to_json(orient='records', indent=1)
+    return df.to_json(orient='records')
