@@ -66,3 +66,10 @@ def get_strain_from_query(query):
     symptom = symptom_from_query(query)
     data = strain_from_symptom(symptom)
     return jsonify(data)
+
+
+# http://localhost:5000/test/My head hurts
+@app.route('/test/<query>')
+def get_symptom_from_query(query):
+    symptom = symptom_from_query(query)
+    return symptom
